@@ -576,12 +576,15 @@ header img:hover{
 
 /*Pagina "Login"*/
 
+#form-orador{
+	min-height: 68.4vh;
+}
+
 .btnLogin{
     text-decoration: none;
     background-color: rgb(150, 201, 62);
     color: white;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    margin-bottom: 34vh;
 }
 
 .btnLogin:hover {
@@ -592,9 +595,13 @@ header img:hover{
 /*Pagina "Listado"*/
 
 .tabla{
-    margin-bottom: 50vh;
+    min-height: 59vh;
 }
 
+.prueba22{
+	text-aling: center;
+	background-color: blue;
+}
 
 
 @media screen and (min-width: 990px) and (max-width: 1290px) {

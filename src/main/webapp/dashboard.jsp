@@ -47,9 +47,9 @@
 	    </header>
 		<main>
 			<section class="container mt-5 mb-4" id="restoOradores">
-		        <h2 class="titulo-gral">Conoce a todos los oradores que se presentan</h2>
+		        <h2 class="titulo-gral text-center">Conoce a todos los oradores que se presentan</h2>
 		      
-		        <div class="row tabla">
+		        <div class="table-responsive">
 		            <table class="table">
 		                <thead>
 		                  <tr>
@@ -57,6 +57,7 @@
 		                    <th scope="col">Nombre</th>
 		                    <th scope="col">Apellido</th>
 		                    <th scope="col">Tema</th>
+		                    <th scope="col">Act</th>
 		                  </tr>
 		                </thead>
 		                 <% 
@@ -75,7 +76,9 @@
 		                    <td><%=unOrador.getNombre() %></td>
 		                    <td><%=unOrador.getApellido() %></td>
 		                    <td><%=unOrador.getTema() %></td>
-		                    <td><a class="btn btn-info" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>">
+		                    <td><%=unOrador.getActivo() %></td>
+		                    <td class="text-center">
+		                    	<a class="btn btn-info" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>">
 							       Editar
 							    </a> | 
 					      		<!-- Button trigger modal -->
