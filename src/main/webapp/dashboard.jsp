@@ -9,6 +9,14 @@
     <link rel="shortcut icon" href="./listado.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <style>
+		/* Estilo personalizado para el buscador */
+		.container-button {
+		  margin-left: 60%; /* Para ubicarlo a la derecha */
+		  padding: 20px !important;
+		  width: 30% !important;
+		}
+	  </style>
    </head>
    <body>
 		  <header>
@@ -46,6 +54,16 @@
 	        </nav>
 	    </header>
 		<main>
+			<div class="container-button">
+				<h1 style="text-align: right; font-size: 20px;">Elige que tema buscar</h1>
+					<form class="d-flex btn" action="<%=request.getContextPath()%>/BuscarOradorTemaController" method="POST">
+						<input class="form-control me-2" name="temabuscar" id="temabuscar" type="search" placeholder="Escribi un tema" aria-label="Buscar">
+						<input class="btn btn-outline-darck bg-success text-darck" type="submit" value="Buscar">
+					</form>
+			</div>
+			<div id="searchResults">
+			<!-- Aqui se mostrarian los resultados de la busqueda -->
+			</div>
 			<section class="container mt-5 mb-4" id="restoOradores">
 		        <h2 class="titulo-gral text-center">Conoce a todos los oradores que se presentan</h2>
 		      
@@ -57,7 +75,8 @@
 		                    <th scope="col">Nombre</th>
 		                    <th scope="col">Apellido</th>
 		                    <th scope="col">Tema</th>
-		                    <th scope="col">Act</th>
+		                    <th scope="col">Activo</th>
+		                    <th class="text-center" scope="col">Acciones</th>
 		                  </tr>
 		                </thead>
 		                 <% 
@@ -106,7 +125,7 @@
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			      </div>
 			      <div class="modal-body">
-			        ¿Confirma que desea eliminar? 
+			        ï¿½Confirma que desea eliminar? 
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2023 a las 16:09:16
+-- Tiempo de generación: 14-12-2023 a las 01:41:35
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,6 +33,7 @@ CREATE TABLE `oradores` (
   `apellido` varchar(50) NOT NULL,
   `mail` varchar(60) NOT NULL,
   `tema` varchar(1000) NOT NULL,
+  `activo` char(2) NOT NULL,
   `fecha_alta` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -40,17 +41,17 @@ CREATE TABLE `oradores` (
 -- Volcado de datos para la tabla `oradores`
 --
 
-INSERT INTO `oradores` (`id_orador`, `nombre`, `apellido`, `mail`, `tema`, `fecha_alta`) VALUES
-(1, 'Diego', 'Milito', 'el_principe_22@gmail.com', 'Oracle', '2023-11-12 11:05:44'),
-(2, 'Lisandro', 'Lopez', 'licha_15@gmail.com', 'Java', '2023-11-12 11:11:52'),
-(3, 'Sebastian', 'Saja', 'chino_saja@gmail.com', 'Javascrpit', '2023-11-12 11:17:01'),
-(4, 'Ivan', 'Pillud', 'ivan4@gmail.com', 'HTML', '2023-11-12 11:19:45'),
-(5, 'Gabriel', 'Hauche', 'el.demonio.hauche@gmail.com', 'CSS', '2023-11-12 11:21:41'),
-(6, 'Rodrigo', 'De Paul', 'rodri_depaul@gmail.com', 'Phyton', '2023-11-12 11:23:13'),
-(7, 'Lautaro', 'Martinez', 'el_toro@gmail.com', 'PHP', '2023-11-12 11:54:35'),
-(8, 'Marcos', 'Acuña', 'el_huevo_acuña@gmail.com', 'C#', '2023-11-12 11:57:50'),
-(9, 'Gustavo', 'Bou', 'la_pantera_bou@gmail.com', 'React', '2023-11-12 11:59:16'),
-(10, 'Facundo', 'Sava', 'el.colorado.sava@gmail.com', 'C++', '2023-11-12 12:01:02');
+INSERT INTO `oradores` (`id_orador`, `nombre`, `apellido`, `mail`, `tema`, `activo`, `fecha_alta`) VALUES
+(1, 'Diego', 'Milito', 'el_principe_22@gmail.com', 'Oracle', 'N', '2023-11-12 11:05:44'),
+(2, 'Lisandro', 'Lopez', 'licha_15@gmail.com', 'Java', 'S', '2023-11-12 11:11:52'),
+(3, 'Sebastian', 'Saja', 'chino_saja@gmail.com', 'Javascrpit', 'N', '2023-11-12 11:17:01'),
+(4, 'Ivan', 'Pillud', 'ivan4@gmail.com', 'HTML', 'S', '2023-11-12 11:19:45'),
+(5, 'Gabriel', 'Hauche', 'el.demonio.hauche@gmail.com', 'CSS', 'S', '2023-11-12 11:21:41'),
+(6, 'Rodrigo', 'De Paul', 'rodri_depaul@gmail.com', 'Phyton', 'S', '2023-11-12 11:23:13'),
+(7, 'Lautaro', 'Martinez', 'el_toro@gmail.com', 'PHP', 'S', '2023-11-12 11:54:35'),
+(8, 'Marcos', 'Acuña', 'el_huevo_acuña@gmail.com', 'C#', 'S', '2023-11-12 11:57:50'),
+(9, 'Gustavo', 'Bou', 'la_pantera_bou@gmail.com', 'React', 'S', '2023-11-12 11:59:16'),
+(10, 'Facundo', 'Sava', 'el.colorado.sava@gmail.com', 'C++', 'N', '2023-11-12 12:01:02');
 
 --
 -- Índices para tablas volcadas
