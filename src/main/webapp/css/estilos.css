@@ -86,6 +86,7 @@ header img:hover{
     border-radius: 5%;    
     padding: 10px;
     margin: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
 .quieroSerOrador:hover{
@@ -101,6 +102,7 @@ header img:hover{
     font-size: 20px;
     padding: 10px;
     margin: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
 .comprarTickets:hover{
@@ -128,6 +130,7 @@ header img:hover{
     margin: 15px;
     margin-top: 0;
     border-radius: 1%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .tarjeta img{
@@ -190,6 +193,7 @@ header img:hover{
     text-decoration: none;
     color: white;
     background-color: green;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
     
 .btnOradores:hover{
@@ -221,6 +225,7 @@ header img:hover{
     border-radius: 5%;
     padding: 4px;
     color: white;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
 .btnConoceMas:hover {
@@ -261,6 +266,11 @@ header img:hover{
     width: 24%;
     padding: 4px;
     margin: 0.5% 1%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.recuadrosFormulario #mail{
+    width: 50.5%;
 }
 
 .recuadrosFormulario textarea{
@@ -365,7 +375,7 @@ header img:hover{
     font-size: 16px;
     width: 100px;
     height: 64px;
-    margin: 5px 30px;
+    margin: 5px 2vw;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -378,6 +388,7 @@ header img:hover{
     background-color: rgb(10, 239, 67) !important;
     border-radius: 5px;
     margin: 2px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
 .tarjetaTickets{
@@ -385,6 +396,7 @@ header img:hover{
     width: 18%;
     text-align: center;
     border-radius: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .tarjetaTickets h3{
@@ -465,6 +477,10 @@ header img:hover{
     width: 57%;
 }
 
+.formularioTicket input{
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
 .formTkNombre{
     padding-right:0%; 
 }
@@ -488,6 +504,7 @@ header img:hover{
     border: solid lightgray 1px;
     color: grey;
     padding-left: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
 .totalAPagar{
@@ -580,6 +597,10 @@ header img:hover{
 	min-height: 68.4vh;
 }
 
+#form-orador input{
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
 .btnLogin{
     text-decoration: none;
     background-color: rgb(150, 201, 62);
@@ -598,9 +619,42 @@ header img:hover{
     min-height: 59vh;
 }
 
-.prueba22{
-	text-aling: center;
-	background-color: blue;
+/*Pagina "Dashboard"*/
+
+.buscadorOrador form{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+}
+
+.buscadorOrador button{
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.buscadorOrador button:hover{
+    background-color: rgb(10, 239, 67) !important;
+    color: white
+}
+
+.btn-volver a{
+	color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+	width: 200px;
+	margin: 10px;
+}
+
+.btn-volver a:hover{
+    background-color: rgb(10, 239, 67) !important;
+    color: white
+}
+
+/*Pagina "Editar"*/
+
+.btnModificar{
+	margin-bottom: 100px;
+}
+
+#formularioModificarOrador{
+    min-height: 67vh;
 }
 
 
@@ -643,13 +697,11 @@ header img:hover{
     .quieroSerOrador{
         margin: 20px;
         display: block;
-        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
     }
 
     .comprarTickets{
         margin: 20px;
         display: block;
-        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
     }
 
     .oradores h2 div{
@@ -659,11 +711,6 @@ header img:hover{
 
     .tarjeta{
         width: 90%;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    }
-
-    .btnOradores{
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     }
 
     .lugarFecha{
@@ -679,19 +726,18 @@ header img:hover{
         text-align: center;
     }
 
-    .btnConoceMas{
-        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
-    }
-
     .formularioOrador p{
         padding-left: 10%;
         padding-right: 10%;
     }
 
     .recuadrosFormulario input, textArea{
-        width: 45%;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        width: 45%;    
     }
+    
+    .recuadrosFormulario #mail{
+    width: 92.5%;
+	}
 
     .recuadrosFormulario textarea{
         width: 92.5%;
@@ -947,6 +993,10 @@ header img:hover{
         width: 45%;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
+    
+    .recuadrosFormulario #mail{
+    width: 92.5%;
+	}
 
     .recuadrosFormulario textarea{
         width: 92.5%;

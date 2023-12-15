@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Integrador Front</title>
+    <title>Proyecto Integrador Back</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
@@ -54,7 +54,7 @@
         </section>
 
         <section class="container mb-4 text-center" id="restoOradores">
-            <a class="btn btn-outline-success btnOradores" href="<%=request.getContextPath()%>/FindAllOradorController">Conoce al resto de los ORADORES</a>
+            <a class="btn btn-form btnOradores" href="<%=request.getContextPath()%>/FindAllOradorController">Conoce al resto de los ORADORES</a>
             <!--<a class="btn btn-outline-success btnOradores" href="./pages/listado.html">Conoce al resto de los ORADORES</a>-->
         </section>
 
@@ -78,17 +78,19 @@
                 ORADOR
             </h2>
             <p>Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</p>
-            <form action="./pages/error404.html" method="get" class="recuadrosFormulario">
+            <form action="<%=request.getContextPath()%>/CreateOradorController" method="POST" class="recuadrosFormulario">
                 <div>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                 </div>
                 <div>
-                    <textarea name="comentario" id="comentario" cols="55" rows="5" placeholder="Sobre qué quieres hablar?" required></textarea>
+                    <input type="email" id="mail" name="mail" placeholder="correo@youmail.com" required>
+                </div>
+                    <textarea name="tema" id="tema" cols="55" rows="5" placeholder="Sobre qué quieres hablar?" required></textarea>
                 </div>
                 <p>Recuerda incluir un título para tu charla</p>
                 <div>
-                    <input type="submit" value="Enviar" class="btnEnviar">
+                    <input type="submit" value="Enviar" class="btn btn-form btnEnviar">
                 </div>
             </form>
         </section>
